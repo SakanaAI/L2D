@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Python notebooks
+*.ipynb
+.ipynb_checkpoints
+
+# WandB files
+wandb/
+
+# Experiments
+experiments/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Miscellaneous
+.DS_Store
+*.tmp
+*.bak
