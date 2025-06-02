@@ -1,7 +1,6 @@
 import numpy as np
 import json
 import wandb
-from accelerate.tracking import GeneralTracker, on_main_process
 
 
 def get_mean_std_max_min_dict(array, prefix):

@@ -26,7 +26,6 @@ def load_conversation_data_from_hf(
 ) -> dict[str, list]:
     debug_mode = config.debug_mode
     debug_mode_data_size = config.debug_mode_data_size
-    multiple_samples_per_jsonl_line = config.multiple_samples_per_jsonl_line
 
     data_filepath2dataset = {}
     assert len(data_processor_classes) == len(filepaths)

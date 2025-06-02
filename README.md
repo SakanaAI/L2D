@@ -39,17 +39,17 @@ By default, checkpoints and results are saved in the `experiments` folder.
 
 ### Finetuning Llama and Qwen models
 
-Please, use the `scripts/run_training.sh` script feeding as the first argument the gpus available to utilize (e.g., 0 or 0,1 or 0,1,2,3... etc.) and as the second argument a path to the relevant config file (e.g., `llama_3.2_1b_instruct_lad_lora.cfg`):
+Please, use the `scripts/run_training.sh` script feeding as the first argument the GPUs available to utilize (e.g., 0 or 0,1 or 0,1,2,3... etc.) and as the second argument a path to the relevant config file (e.g., `llama_3.2_1b_instruct_lad_lora.cfg`):
 
 ```bash
 scripts/run_training.sh 0,1 cfgs/model/llama_3.2_1b_instruct_lad_lora.cfg
 ```
 
-This training phase uses the Smoltalk dataset, 
+By default, this training phase uses a subset of the Smoltalk dataset. However, it can be easily extended to any custom dataset by making another traning task following the example structure in `tasks/smoltalk.py`.
 
 ### Evaluation
 
-Please, use the `scripts/run_bench_full.sh` script feeding as the first argument the gpus available to utilize (e.g., 0 or 0,1 or 0,1,2,3... etc.), as second argument a path to the relevant config file (e.g., `cfgs/model/llama_3.2_1b_lad_lora.cfg`), and as third argument the path to the saved PyTorch checkpoint file after training:
+Please, use the `scripts/run_bench_full.sh` script feeding as the first argument the GPUs available to utilize (e.g., 0 or 0,1 or 0,1,2,3... etc.), as second argument a path to the relevant config file (e.g., `cfgs/model/llama_3.2_1b_lad_lora.cfg`), and as third argument the path to the saved PyTorch checkpoint file after training:
 
 ```bash
 scripts/run_bench_full.sh 0,1 cfgs/model/llama_3.2_1b_lad_lora.cfg $CHECKPOINT_PATH
